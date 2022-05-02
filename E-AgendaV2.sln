@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32414.318
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-AgendaV2.WinFormsApp", "E-AgendaV2.WinFormsApp\E-AgendaV2.WinFormsApp.csproj", "{DDE96DD1-6FCC-477F-B7B4-A42C4D208D4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "E-AgendaV2.WinFormsApp", "E-AgendaV2.WinFormsApp\E-AgendaV2.WinFormsApp.csproj", "{DDE96DD1-6FCC-477F-B7B4-A42C4D208D4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "E-Agenda.Dominio", "GestãoTarefas.Dominio\E-Agenda.Dominio.csproj", "{6F834286-517E-441E-AAA6-41DC617C213E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestãoTarefas.Dominio", "GestãoTarefas.Dominio\GestãoTarefas.Dominio.csproj", "{6F834286-517E-441E-AAA6-41DC617C213E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1- Apresentação", "1- Apresentação", "{FB5F2548-839F-4CD2-8F33-521B636A4D44}"
 EndProject
@@ -13,7 +13,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2- Dominio", "2- Dominio", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Infra", "3- Infra", "{7B03A068-2A85-49B9-AFDD-79762C1158A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GestãoE-Agenda.Infra.Arquivo", "GestãoE-Agenda.Infra.Arquivo\GestãoE-Agenda.Infra.Arquivo.csproj", "{45743B17-8D53-4663-AFDC-69D10E9CD0F1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GestãoE-Agenda.Infra.Arquivo", "GestãoE-Agenda.Infra.Arquivo\GestãoE-Agenda.Infra.Arquivo.csproj", "{45743B17-8D53-4663-AFDC-69D10E9CD0F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

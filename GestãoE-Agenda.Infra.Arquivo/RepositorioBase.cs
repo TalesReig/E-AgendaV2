@@ -52,69 +52,11 @@ namespace GestãoE_Agenda.Infra.Arquivo
             return false;
         }
 
-        //public bool Editar(Predicate<T> condicao, T novaEntidade)
-        //{
-        //    string resultadoValidacao = novaEntidade.Validar();
-        //
-        //    if (resultadoValidacao != "REGISTRO_VALIDO")
-        //        return false;
-        //
-        //    foreach (T entidade in registros)
-        //    {
-        //        if (condicao(entidade))
-        //        {
-        //            novaEntidade.id = entidade.id;
-        //
-        //            int posicaoParaEditar = registros.IndexOf(entidade);
-        //            registros[posicaoParaEditar] = novaEntidade;
-        //
-        //            return true;
-        //        }
-        //    }
-        //
-        //    return false;
-        //}
-
         public bool Excluir(T novaEntidade)
         {
             registros.Remove(novaEntidade);
             return true;
         }
-
-        //public bool Excluir(Predicate<T> condicao)
-        //{
-        //    foreach (T entidade in registros)
-        //    {
-        //        if (condicao(entidade))
-        //        {
-        //            registros.Remove(entidade);
-        //            return true;
-        //        }
-        //    }
-        //    return false;
-        //}
-
-        public T SelecionarRegistro(int idSelecionado)
-        {
-         //   foreach (T entidade in registros)
-         //   {
-         //       if (idSelecionado == entidade.id)
-         //           return entidade;
-         //   }
-         //
-            return null;
-        }
-
-        // public T SelecionarRegistro(Predicate<T> condicao)
-        // {
-        //     foreach (T entidade in registros)
-        //     {
-        //         if (condicao(entidade))
-        //             return entidade;
-        //     }
-        // 
-        //     return null;
-        // }
 
         public List<T> SelecionarTodos()
         {
@@ -130,24 +72,6 @@ namespace GestãoE_Agenda.Infra.Arquivo
                     registrosFiltrados.Add(registro);
 
             return registrosFiltrados;
-        }
-
-        public bool ExisteRegistro(int idSelecionado)
-        {
-            foreach (T entidade in registros)
-                if (idSelecionado == entidade.id)
-                    return true;
-        
-            return false;
-        }
-
-        public bool ExisteRegistro(Predicate<T> condicao)
-        {
-            foreach (T entidade in registros)
-                if (condicao(entidade))
-                    return true;
-        
-            return false;
         }
 
     }

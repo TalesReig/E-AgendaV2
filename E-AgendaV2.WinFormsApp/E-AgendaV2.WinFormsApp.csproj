@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\GestãoE-Agenda.Infra.Arquivo\GestãoE-Agenda.Infra.Arquivo.csproj" />
-    <ProjectReference Include="..\GestãoTarefas.Dominio\E-Agenda.Dominio.csproj" />
+    <ProjectReference Include="..\GestãoTarefas.Dominio\GestãoTarefas.Dominio.csproj" />
   </ItemGroup>
 
 </Project>

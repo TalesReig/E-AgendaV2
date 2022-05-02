@@ -30,19 +30,17 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
-            this.txtFone = new System.Windows.Forms.TextBox();
             this.txtEmpresa = new System.Windows.Forms.TextBox();
             this.txtCargo = new System.Windows.Forms.TextBox();
-            this.txtDDD = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.Cadastrar = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.maskFone = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -57,25 +55,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 115);
+            this.label2.Location = new System.Drawing.Point(25, 115);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 15);
             this.label2.TabIndex = 1;
             this.label2.Text = "E-mail:";
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(31, 15);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "DDD";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 181);
+            this.label4.Location = new System.Drawing.Point(25, 143);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(55, 15);
             this.label4.TabIndex = 3;
@@ -84,7 +73,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(199, 181);
+            this.label6.Location = new System.Drawing.Point(209, 144);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 15);
             this.label6.TabIndex = 5;
@@ -104,38 +93,24 @@
             this.txtEmail.Size = new System.Drawing.Size(274, 23);
             this.txtEmail.TabIndex = 7;
             // 
-            // txtFone
-            // 
-            this.txtFone.Location = new System.Drawing.Point(244, 143);
-            this.txtFone.Name = "txtFone";
-            this.txtFone.Size = new System.Drawing.Size(121, 23);
-            this.txtFone.TabIndex = 8;
-            // 
             // txtEmpresa
             // 
-            this.txtEmpresa.Location = new System.Drawing.Point(91, 173);
+            this.txtEmpresa.Location = new System.Drawing.Point(91, 136);
             this.txtEmpresa.Name = "txtEmpresa";
-            this.txtEmpresa.Size = new System.Drawing.Size(100, 23);
-            this.txtEmpresa.TabIndex = 9;
+            this.txtEmpresa.Size = new System.Drawing.Size(118, 23);
+            this.txtEmpresa.TabIndex = 8;
             // 
             // txtCargo
             // 
-            this.txtCargo.Location = new System.Drawing.Point(244, 173);
+            this.txtCargo.Location = new System.Drawing.Point(246, 135);
             this.txtCargo.Name = "txtCargo";
-            this.txtCargo.Size = new System.Drawing.Size(121, 23);
+            this.txtCargo.Size = new System.Drawing.Size(119, 23);
             this.txtCargo.TabIndex = 10;
-            // 
-            // txtDDD
-            // 
-            this.txtDDD.Location = new System.Drawing.Point(91, 143);
-            this.txtDDD.Name = "txtDDD";
-            this.txtDDD.Size = new System.Drawing.Size(100, 23);
-            this.txtDDD.TabIndex = 11;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(199, 146);
+            this.label5.Location = new System.Drawing.Point(25, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(36, 15);
             this.label5.TabIndex = 12;
@@ -172,24 +147,30 @@
             this.label7.TabIndex = 15;
             this.label7.Text = "Cadastro De Contato:";
             // 
+            // maskFone
+            // 
+            this.maskFone.Location = new System.Drawing.Point(91, 170);
+            this.maskFone.Mask = "(00) 00000-0000";
+            this.maskFone.Name = "maskFone";
+            this.maskFone.Size = new System.Drawing.Size(81, 23);
+            this.maskFone.TabIndex = 16;
+            // 
             // CadastroDeContato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 259);
+            this.Controls.Add(this.maskFone);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.Cadastrar);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.txtDDD);
             this.Controls.Add(this.txtCargo);
             this.Controls.Add(this.txtEmpresa);
-            this.Controls.Add(this.txtFone);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "CadastroDeContato";
@@ -204,18 +185,16 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.TextBox txtFone;
         private System.Windows.Forms.TextBox txtEmpresa;
         private System.Windows.Forms.TextBox txtCargo;
-        private System.Windows.Forms.TextBox txtDDD;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button Cadastrar;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.MaskedTextBox maskFone;
     }
 }

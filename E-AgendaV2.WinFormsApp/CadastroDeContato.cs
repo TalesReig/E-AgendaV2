@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using GestãoTarefas.Dominio.Contato;
+using GestãoTarefas.Dominio;
 
 namespace E_AgendaV2.WinFormsApp
 {
@@ -31,8 +31,7 @@ namespace E_AgendaV2.WinFormsApp
                 contato = value;
                 txtNome.Text = contato.Nome;
                 txtEmail.Text = contato.Email;
-                txtDDD.Text = contato.DDD.ToString();
-                txtFone.Text = contato.Telefone.ToString();
+                txtEmpresa.Text = contato.Telefone.ToString();
                 txtEmpresa.Text = contato.Empresa;
                 txtCargo.Text = contato.Cargo;
             }
@@ -42,8 +41,7 @@ namespace E_AgendaV2.WinFormsApp
         {
             contato.Nome = txtNome.Text;
             contato.Email = txtEmail.Text;
-            contato.DDD = txtDDD.Text.ToString();
-            contato.Telefone = txtFone.Text.ToString();
+            contato.Telefone = maskFone.Text.ToString();
             contato.Empresa = txtEmpresa.Text;
             contato.Cargo = txtCargo.Text;
         }

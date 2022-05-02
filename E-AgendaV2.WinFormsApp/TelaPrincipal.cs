@@ -16,15 +16,18 @@ namespace E_AgendaV2.WinFormsApp
         private readonly RepositorioContato _repositorioContato;
         private readonly ListagemDeContatos pContato;
 
-        ListagemDeCompromissos pCompromisso;
-        ListagemDeTarefas pTarefas;
+        private readonly RepositorioCompromisso _repositorioCompromisso;
+        private readonly ListagemDeCompromissos pCompromisso;
+
+        private readonly ListagemDeTarefas pTarefas;
         public TelaPrincipal()
         {
             InitializeComponent();
             _repositorioContato = new RepositorioContato();
             pContato = new ListagemDeContatos(_repositorioContato);
 
-            pCompromisso = new ListagemDeCompromissos();
+            _repositorioCompromisso = new RepositorioCompromisso();
+            pCompromisso = new ListagemDeCompromissos(_repositorioCompromisso, _repositorioContato.SelecionarTodos());
             pTarefas = new ListagemDeTarefas();
         }
 
@@ -45,7 +48,6 @@ namespace E_AgendaV2.WinFormsApp
             Painel.Controls.Clear();
             Painel.Controls.Add(pTarefas);
         }
-
 
     }
 }

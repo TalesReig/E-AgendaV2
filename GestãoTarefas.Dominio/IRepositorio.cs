@@ -11,8 +11,6 @@ namespace GestãoTarefas.Dominio
         string Inserir(T entidade);
         bool Editar(T entidade);
         bool Excluir(T entidade);
-        bool ExisteRegistro(int idSelecionado);
-        T SelecionarRegistro(int idSelecionado);
         List<T> SelecionarTodos();
 
         // bool Editar(Predicate<T> condicao, T novaEntidade);

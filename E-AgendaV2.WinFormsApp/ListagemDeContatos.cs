@@ -1,6 +1,5 @@
 ﻿using GestãoE_Agenda.Infra.Arquivo;
 using GestãoTarefas.Dominio;
-using GestãoTarefas.Dominio.Contato;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -32,8 +31,16 @@ namespace E_AgendaV2.WinFormsApp
 
             if(resultado == DialogResult.OK)
             {
-                repositorio.Inserir(tela.contato);
-                CarregarContatos();
+                if(tela.contato.Validar() == "REGISTRO_VALIDO")
+                {
+                    repositorio.Inserir(tela.contato);
+                    CarregarContatos();
+                }
+                else
+                {
+                    MessageBox.Show("Prencha os campos brigatorios Nome/E-mail/Telefone e nos padroes corretos Telefone (xx)xxxxx-xxxx",
+                    "Inserção de Contatos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
@@ -54,10 +61,18 @@ namespace E_AgendaV2.WinFormsApp
 
             DialogResult resultado = tela.ShowDialog();
 
-            if(resultado == DialogResult.OK)
+            if (resultado == DialogResult.OK)
             {
-                repositorio.Editar(tela.contato);
-                CarregarContatos();
+                if (tela.contato.Validar() == "REGISTRO_VALIDO")
+                {
+                    repositorio.Inserir(tela.contato);
+                    CarregarContatos();
+                }
+                else
+                {
+                    MessageBox.Show("Prencha os campos brigatorios Nome/E-mail/Telefone e nos padroes corretos Telefone (xx)xxxxx-xxxx",
+                    "Inserção de Contatos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                }
             }
         }
 
