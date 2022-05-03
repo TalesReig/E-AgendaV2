@@ -41,7 +41,7 @@
             this.listCompromissos.ItemHeight = 15;
             this.listCompromissos.Location = new System.Drawing.Point(192, 41);
             this.listCompromissos.Name = "listCompromissos";
-            this.listCompromissos.Size = new System.Drawing.Size(477, 259);
+            this.listCompromissos.Size = new System.Drawing.Size(583, 259);
             this.listCompromissos.TabIndex = 9;
             // 
             // label1
@@ -95,7 +95,7 @@
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnInserir);
             this.Name = "ListagemDeCompromissos";
-            this.Size = new System.Drawing.Size(688, 339);
+            this.Size = new System.Drawing.Size(800, 340);
             this.ResumeLayout(false);
             this.PerformLayout();
 

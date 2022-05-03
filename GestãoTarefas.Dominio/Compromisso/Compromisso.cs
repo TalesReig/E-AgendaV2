@@ -35,12 +35,7 @@ namespace GestãoTarefas.Dominio
         {
             //string contatoRelacionado = Contato is null ? "Não disponível" : Contato.Nome;
 
-            return "|Assunto: " + Assunto +
-                "|Local: " + Local +
-                "|Data do compromisso: " + DataCompromisso.ToShortDateString() +
-                "|Hora de ínicio: " + HoraInicio + Environment.NewLine +
-                "|Hora de término: " + HoraTermino +
-                /*"|Contato: " + contatoRelacionado+*/"|";
+            return $"Assunto: {Assunto} Data: {_dataCompromisso} H Inicio: {HoraInicio} H Termino: {HoraTermino} Contato: {NomeContato}";
         }
 
         public override string Validar()
@@ -56,10 +51,21 @@ namespace GestãoTarefas.Dominio
             if (DataCompromisso == DateTime.MinValue)
                 sb.AppendLine("A data do compromisso obrigatória!");
 
+            if(ValidarHoraFinal() == false)
+                sb.AppendLine("As Horas são inválidas!");
+
             if (sb.Length == 0)
                 return "REGISTRO_VALIDO";
 
             return sb.ToString();
+        }
+
+        private bool ValidarHoraFinal()
+        {
+            if(HoraInicio < HoraTermino)
+            return true;
+
+            return false;
         }
     }
 }

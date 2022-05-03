@@ -88,7 +88,7 @@
             this.listContatos.ItemHeight = 15;
             this.listContatos.Location = new System.Drawing.Point(0, 2);
             this.listContatos.Name = "listContatos";
-            this.listContatos.Size = new System.Drawing.Size(481, 244);
+            this.listContatos.Size = new System.Drawing.Size(578, 244);
             this.listContatos.TabIndex = 4;
             // 
             // tabControl1
@@ -98,7 +98,7 @@
             this.tabControl1.Location = new System.Drawing.Point(181, 38);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(492, 276);
+            this.tabControl1.Size = new System.Drawing.Size(589, 276);
             this.tabControl1.TabIndex = 5;
             // 
             // Contatos
@@ -107,7 +107,7 @@
             this.Contatos.Location = new System.Drawing.Point(4, 24);
             this.Contatos.Name = "Contatos";
             this.Contatos.Padding = new System.Windows.Forms.Padding(3);
-            this.Contatos.Size = new System.Drawing.Size(484, 248);
+            this.Contatos.Size = new System.Drawing.Size(581, 248);
             this.Contatos.TabIndex = 0;
             this.Contatos.Text = "Contatos Ordenados Por Nome";
             this.Contatos.UseVisualStyleBackColor = true;
@@ -118,7 +118,7 @@
             this.ContatosCargo.Location = new System.Drawing.Point(4, 24);
             this.ContatosCargo.Name = "ContatosCargo";
             this.ContatosCargo.Padding = new System.Windows.Forms.Padding(3);
-            this.ContatosCargo.Size = new System.Drawing.Size(484, 248);
+            this.ContatosCargo.Size = new System.Drawing.Size(581, 248);
             this.ContatosCargo.TabIndex = 1;
             this.ContatosCargo.Text = "Contatos Agrupados Por Cargo";
             this.ContatosCargo.UseVisualStyleBackColor = true;
@@ -129,7 +129,7 @@
             this.listContatosAgrupados.ItemHeight = 15;
             this.listContatosAgrupados.Location = new System.Drawing.Point(1, 3);
             this.listContatosAgrupados.Name = "listContatosAgrupados";
-            this.listContatosAgrupados.Size = new System.Drawing.Size(482, 244);
+            this.listContatosAgrupados.Size = new System.Drawing.Size(577, 244);
             this.listContatosAgrupados.TabIndex = 0;
             // 
             // ListagemDeContatos
@@ -143,7 +143,7 @@
             this.Controls.Add(this.EditarContatos);
             this.Controls.Add(this.InserirContatos);
             this.Name = "ListagemDeContatos";
-            this.Size = new System.Drawing.Size(688, 339);
+            this.Size = new System.Drawing.Size(800, 340);
             this.tabControl1.ResumeLayout(false);
             this.Contatos.ResumeLayout(false);
             this.ContatosCargo.ResumeLayout(false);

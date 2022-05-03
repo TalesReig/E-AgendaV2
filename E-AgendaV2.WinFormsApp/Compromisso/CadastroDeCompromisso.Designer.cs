@@ -43,6 +43,8 @@
             this.BtnCadastrar = new System.Windows.Forms.Button();
             this.BtnCancelar = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
+            this.cbxHInicio = new System.Windows.Forms.ComboBox();
+            this.cbxHFinal = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // label1
@@ -115,16 +117,16 @@
             // 
             // txtHInicio
             // 
-            this.txtHInicio.Location = new System.Drawing.Point(113, 146);
+            this.txtHInicio.Location = new System.Drawing.Point(286, 146);
             this.txtHInicio.Name = "txtHInicio";
-            this.txtHInicio.Size = new System.Drawing.Size(186, 23);
+            this.txtHInicio.Size = new System.Drawing.Size(13, 23);
             this.txtHInicio.TabIndex = 9;
             // 
             // txtHfinal
             // 
-            this.txtHfinal.Location = new System.Drawing.Point(113, 175);
+            this.txtHfinal.Location = new System.Drawing.Point(286, 175);
             this.txtHfinal.Name = "txtHfinal";
-            this.txtHfinal.Size = new System.Drawing.Size(186, 23);
+            this.txtHfinal.Size = new System.Drawing.Size(13, 23);
             this.txtHfinal.TabIndex = 10;
             // 
             // dateTime
@@ -174,11 +176,81 @@
             this.label7.TabIndex = 16;
             this.label7.Text = "Cadastro De Compromissos";
             // 
+            // cbxHInicio
+            // 
+            this.cbxHInicio.FormattingEnabled = true;
+            this.cbxHInicio.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"});
+            this.cbxHInicio.Location = new System.Drawing.Point(113, 146);
+            this.cbxHInicio.Name = "cbxHInicio";
+            this.cbxHInicio.Size = new System.Drawing.Size(127, 23);
+            this.cbxHInicio.TabIndex = 17;
+            // 
+            // cbxHFinal
+            // 
+            this.cbxHFinal.FormattingEnabled = true;
+            this.cbxHFinal.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24"});
+            this.cbxHFinal.Location = new System.Drawing.Point(113, 175);
+            this.cbxHFinal.Name = "cbxHFinal";
+            this.cbxHFinal.Size = new System.Drawing.Size(127, 23);
+            this.cbxHFinal.TabIndex = 18;
+            // 
             // CadastroDeCompromisso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(324, 276);
+            this.Controls.Add(this.cbxHFinal);
+            this.Controls.Add(this.cbxHInicio);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.BtnCancelar);
             this.Controls.Add(this.BtnCadastrar);
@@ -218,5 +290,7 @@
         private System.Windows.Forms.Button BtnCadastrar;
         private System.Windows.Forms.Button BtnCancelar;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cbxHInicio;
+        private System.Windows.Forms.ComboBox cbxHFinal;
     }
 }

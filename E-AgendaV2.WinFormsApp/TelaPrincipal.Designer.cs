@@ -68,14 +68,14 @@
             // 
             this.Painel.Location = new System.Drawing.Point(29, 80);
             this.Painel.Name = "Painel";
-            this.Painel.Size = new System.Drawing.Size(690, 341);
+            this.Painel.Size = new System.Drawing.Size(800, 340);
             this.Painel.TabIndex = 3;
             // 
             // TelaPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 450);
+            this.ClientSize = new System.Drawing.Size(860, 461);
             this.Controls.Add(this.Painel);
             this.Controls.Add(this.BtnTarefas);
             this.Controls.Add(this.BtnCompromissos);

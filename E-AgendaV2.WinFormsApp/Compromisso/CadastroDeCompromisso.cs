@@ -40,8 +40,8 @@ namespace E_AgendaV2.WinFormsApp
             compromisso.DataCompromisso = dataC;
             try
             {
-                compromisso.HoraInicio = Convert.ToInt32(txtHInicio.Text);
-                compromisso.HoraTermino = Convert.ToInt32(txtHfinal.Text);
+                compromisso.HoraInicio = Convert.ToInt32(cbxHInicio.Text);
+                compromisso.HoraTermino = Convert.ToInt32(cbxHFinal.Text);
             }
             catch
             {

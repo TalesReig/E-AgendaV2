@@ -44,7 +44,7 @@ namespace E_AgendaV2.WinFormsApp
                 }
                 else
                 {
-                    MessageBox.Show("Prencha os campos brigatorios Assunto, Local e Data do compromisso",
+                    MessageBox.Show("Prencha os campos brigatorios Assunto, Local e Data do compromisso (OBS: a hora final deve ser maior que a hora inicial)",
                     "Inserção de Contatos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
