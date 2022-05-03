@@ -99,7 +99,25 @@ namespace E_AgendaV2.WinFormsApp
 
         private void btnCadastrarIten_Click(object sender, EventArgs e)
         {
+            Tarefa tarefaSelecionado = (Tarefa)listTarefas.SelectedItem;
 
+            if (tarefaSelecionado == null)
+            {
+                MessageBox.Show("Selecione uma tarefa primeiro",
+                "Edição de Tarefas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            CadastroDeItensDaTarefa tela = new CadastroDeItensDaTarefa(tarefaSelecionado);
+
+            if(tela.ShowDialog() == DialogResult.OK)
+            {
+                List<ItemTarefa> itens = tela.ItensAdcionados;
+
+                repositorio.AdcionarItens(tarefaSelecionado, itens);
+
+                CarregarTarefas();
+            }
         }
 
         private void btnAtualizarIten_Click(object sender, EventArgs e)

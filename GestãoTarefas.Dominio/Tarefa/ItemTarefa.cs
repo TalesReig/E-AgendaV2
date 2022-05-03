@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GestãoTarefas.Dominio
 {
-    internal class ItemTarefa
+    public class ItemTarefa
     {
         public string Titulo { get; set; }
 

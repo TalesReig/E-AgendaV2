@@ -29,7 +29,7 @@ namespace GestãoTarefas.Dominio
         public DateTime? DataConclusao { get; set; }
 
         public int prioridade;
-        //public List<ItemTarefa> Itens { get { return itens; } }
+        public List<ItemTarefa> Itens { get { return itens; } }
         
         public override string ToString()
         {
@@ -44,9 +44,10 @@ namespace GestãoTarefas.Dominio
             return $"Título: {Titulo}, Percentual: {percentual}";
         }
         
-        /*
+        
         public void AdicionarItem(ItemTarefa item)
         {
+            //evita duplicar a lista
             if (Itens.Exists(x => x.Equals(item)) == false)
                 itens.Add(item);
         }
@@ -69,7 +70,7 @@ namespace GestãoTarefas.Dominio
 
             itemTarefa?.MarcarPendente();
         }
-        */
+        
 
         public decimal CalcularPercentualConcluido()
         {
