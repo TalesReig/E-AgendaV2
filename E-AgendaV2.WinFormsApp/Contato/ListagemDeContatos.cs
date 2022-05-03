@@ -20,6 +20,7 @@ namespace E_AgendaV2.WinFormsApp
             this.repositorio = repositorio;
             InitializeComponent();
             CarregarContatos();
+            CarregarRegistrosOrdenados();
         }
 
         private void InserirContatos_Click(object sender, EventArgs e)
@@ -35,6 +36,7 @@ namespace E_AgendaV2.WinFormsApp
                 {
                     repositorio.Inserir(tela.contato);
                     CarregarContatos();
+                    CarregarRegistrosOrdenados();
                 }
                 else
                 {
@@ -67,6 +69,7 @@ namespace E_AgendaV2.WinFormsApp
                 {
                     repositorio.Editar(tela.contato);
                     CarregarContatos();
+                    CarregarRegistrosOrdenados();
                 }
                 else
                 {
@@ -94,13 +97,14 @@ namespace E_AgendaV2.WinFormsApp
             {
                 repositorio.Excluir(contatoSelecionado);
                 CarregarContatos();
+                CarregarRegistrosOrdenados();
             }
         }
 
         #region métodos privados
         private void CarregarContatos()
         {
-            List<Contato> contatos = repositorio.SelecionarTodos();
+            List<Contato> contatos = repositorio.SelecionarTodos().OrderByDescending(x => x.Nome).ToList();
 
             listContatos.Items.Clear();
 
@@ -110,6 +114,20 @@ namespace E_AgendaV2.WinFormsApp
             }
         }
 
+        private void CarregarRegistrosOrdenados()
+        {
+            List<Contato> contatos = repositorio.SelecionarTodos().OrderByDescending(x => x.Cargo).ToList();
+
+            listContatosAgrupados.Items.Clear();
+
+            foreach (Contato c in contatos)
+            {
+                listContatosAgrupados.Items.Add(c);
+            }
+        }
+
+
         #endregion
+
     }
 }

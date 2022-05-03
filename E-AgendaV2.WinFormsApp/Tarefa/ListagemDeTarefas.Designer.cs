@@ -36,9 +36,9 @@
             this.btnAtualizarIten = new System.Windows.Forms.Button();
             this.tabControlTarefas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listTarefas = new System.Windows.Forms.ListBox();
+            this.listTarefasP = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listTarefasPendentes = new System.Windows.Forms.ListBox();
+            this.listTarefasC = new System.Windows.Forms.ListBox();
             this.tabControlTarefas.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -116,43 +116,43 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listTarefas);
+            this.tabPage1.Controls.Add(this.listTarefasP);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(467, 231);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Tarefas";
+            this.tabPage1.Text = "Tarefas Pendentes";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // listTarefas
+            // listTarefasP
             // 
-            this.listTarefas.FormattingEnabled = true;
-            this.listTarefas.ItemHeight = 15;
-            this.listTarefas.Location = new System.Drawing.Point(0, 2);
-            this.listTarefas.Name = "listTarefas";
-            this.listTarefas.Size = new System.Drawing.Size(467, 229);
-            this.listTarefas.TabIndex = 0;
+            this.listTarefasP.FormattingEnabled = true;
+            this.listTarefasP.ItemHeight = 15;
+            this.listTarefasP.Location = new System.Drawing.Point(0, 2);
+            this.listTarefasP.Name = "listTarefasP";
+            this.listTarefasP.Size = new System.Drawing.Size(467, 229);
+            this.listTarefasP.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.listTarefasPendentes);
+            this.tabPage2.Controls.Add(this.listTarefasC);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(467, 231);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Tarefas Pendentes ";
+            this.tabPage2.Text = "Tarefas Concluidas";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // listTarefasPendentes
+            // listTarefasC
             // 
-            this.listTarefasPendentes.FormattingEnabled = true;
-            this.listTarefasPendentes.ItemHeight = 15;
-            this.listTarefasPendentes.Location = new System.Drawing.Point(0, 2);
-            this.listTarefasPendentes.Name = "listTarefasPendentes";
-            this.listTarefasPendentes.Size = new System.Drawing.Size(467, 229);
-            this.listTarefasPendentes.TabIndex = 0;
+            this.listTarefasC.FormattingEnabled = true;
+            this.listTarefasC.ItemHeight = 15;
+            this.listTarefasC.Location = new System.Drawing.Point(0, 2);
+            this.listTarefasC.Name = "listTarefasC";
+            this.listTarefasC.Size = new System.Drawing.Size(467, 229);
+            this.listTarefasC.TabIndex = 0;
             // 
             // ListagemDeTarefas
             // 
@@ -185,8 +185,8 @@
         private System.Windows.Forms.Button btnAtualizarIten;
         private System.Windows.Forms.TabControl tabControlTarefas;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListBox listTarefas;
+        private System.Windows.Forms.ListBox listTarefasP;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox listTarefasPendentes;
+        private System.Windows.Forms.ListBox listTarefasC;
     }
 }

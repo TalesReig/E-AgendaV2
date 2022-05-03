@@ -33,6 +33,13 @@
             this.EditarContatos = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.listContatos = new System.Windows.Forms.ListBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.Contatos = new System.Windows.Forms.TabPage();
+            this.ContatosCargo = new System.Windows.Forms.TabPage();
+            this.listContatosAgrupados = new System.Windows.Forms.ListBox();
+            this.tabControl1.SuspendLayout();
+            this.Contatos.SuspendLayout();
+            this.ContatosCargo.SuspendLayout();
             this.SuspendLayout();
             // 
             // InserirContatos
@@ -79,23 +86,67 @@
             // 
             this.listContatos.FormattingEnabled = true;
             this.listContatos.ItemHeight = 15;
-            this.listContatos.Location = new System.Drawing.Point(190, 48);
+            this.listContatos.Location = new System.Drawing.Point(0, 2);
             this.listContatos.Name = "listContatos";
-            this.listContatos.Size = new System.Drawing.Size(477, 259);
+            this.listContatos.Size = new System.Drawing.Size(481, 244);
             this.listContatos.TabIndex = 4;
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.Contatos);
+            this.tabControl1.Controls.Add(this.ContatosCargo);
+            this.tabControl1.Location = new System.Drawing.Point(181, 38);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(492, 276);
+            this.tabControl1.TabIndex = 5;
+            // 
+            // Contatos
+            // 
+            this.Contatos.Controls.Add(this.listContatos);
+            this.Contatos.Location = new System.Drawing.Point(4, 24);
+            this.Contatos.Name = "Contatos";
+            this.Contatos.Padding = new System.Windows.Forms.Padding(3);
+            this.Contatos.Size = new System.Drawing.Size(484, 248);
+            this.Contatos.TabIndex = 0;
+            this.Contatos.Text = "Contatos Ordenados Por Nome";
+            this.Contatos.UseVisualStyleBackColor = true;
+            // 
+            // ContatosCargo
+            // 
+            this.ContatosCargo.Controls.Add(this.listContatosAgrupados);
+            this.ContatosCargo.Location = new System.Drawing.Point(4, 24);
+            this.ContatosCargo.Name = "ContatosCargo";
+            this.ContatosCargo.Padding = new System.Windows.Forms.Padding(3);
+            this.ContatosCargo.Size = new System.Drawing.Size(484, 248);
+            this.ContatosCargo.TabIndex = 1;
+            this.ContatosCargo.Text = "Contatos Agrupados Por Cargo";
+            this.ContatosCargo.UseVisualStyleBackColor = true;
+            // 
+            // listContatosAgrupados
+            // 
+            this.listContatosAgrupados.FormattingEnabled = true;
+            this.listContatosAgrupados.ItemHeight = 15;
+            this.listContatosAgrupados.Location = new System.Drawing.Point(1, 3);
+            this.listContatosAgrupados.Name = "listContatosAgrupados";
+            this.listContatosAgrupados.Size = new System.Drawing.Size(482, 244);
+            this.listContatosAgrupados.TabIndex = 0;
             // 
             // ListagemDeContatos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.listContatos);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ExcluirContatos);
             this.Controls.Add(this.EditarContatos);
             this.Controls.Add(this.InserirContatos);
             this.Name = "ListagemDeContatos";
             this.Size = new System.Drawing.Size(688, 339);
+            this.tabControl1.ResumeLayout(false);
+            this.Contatos.ResumeLayout(false);
+            this.ContatosCargo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,5 +159,9 @@
         private System.Windows.Forms.Button EditarContatos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox listContatos;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage Contatos;
+        private System.Windows.Forms.TabPage ContatosCargo;
+        private System.Windows.Forms.ListBox listContatosAgrupados;
     }
 }

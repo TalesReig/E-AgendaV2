@@ -10,7 +10,6 @@ namespace GestãoTarefas.Dominio
     {
         public string Nome { get; set; }
         public string Email { get; set; }
-        public string DDD { get; set; }
         public string Telefone { get; set; }
         public string Empresa { get; set; }
         public string Cargo { get; set; }
@@ -79,7 +78,7 @@ namespace GestãoTarefas.Dominio
 
         public override string ToString()
         {
-            return $"|Nome: {Nome}|Email: {Email}|Telefone: {DDD}{Telefone}|Empresa: {Empresa}|Cargo: {Cargo}|";
+            return $"|Nome: {Nome}|Email: {Email}|Telefone: {Telefone}|Empresa: {Empresa}|Cargo: {Cargo}|";
         }
     }
 }

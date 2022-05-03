@@ -9,5 +9,9 @@ namespace GestãoE_Agenda.Infra.Arquivo
 {
     public class RepositorioCompromisso : RepositorioBase<Compromisso>
     {
+        public RepositorioCompromisso() : base(@"C:\Temp\Compromisso")
+        {
+
+        }
     }
 }

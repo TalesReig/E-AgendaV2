@@ -18,9 +18,11 @@ namespace E_AgendaV2.WinFormsApp
         private readonly RepositorioContato _repositorioContato;
         private readonly ListagemDeContatos pContato;
 
+        private readonly JsonSerialization<Compromisso> _jsonCompromissosSerialization;
         private readonly RepositorioCompromisso _repositorioCompromisso;
         private readonly ListagemDeCompromissos pCompromisso;
 
+        private readonly JsonSerialization<Tarefa> _jsonTarefasSerialization;
         private readonly RepositorioTarefa _repositorioTarefa;
         private readonly ListagemDeTarefas pTarefas;
 
@@ -35,7 +37,7 @@ namespace E_AgendaV2.WinFormsApp
             pCompromisso = new ListagemDeCompromissos(_repositorioCompromisso, _repositorioContato.SelecionarTodos());
 
             _repositorioTarefa = new RepositorioTarefa();
-            pTarefas = new ListagemDeTarefas(_repositorioTarefa);
+            pTarefas = new ListagemDeTarefas(_repositorioTarefa, _jsonTarefasSerialization);
         }
 
         private void button1_Click(object sender, EventArgs e)

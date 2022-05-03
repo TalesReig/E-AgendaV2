@@ -40,8 +40,17 @@ namespace GestãoTarefas.Dominio
                 return $"Título: {Titulo},Percentual: {percentual}, " +
                     $"Concluída: {DataConclusao.Value.ToShortDateString()}";
             }
+            string strPrioridade = "Baixa";
+            if (prioridade == 1)
+                strPrioridade = "Baixa";
 
-            return $"Título: {Titulo}, Percentual: {percentual}%";
+            if (prioridade == 2)
+                strPrioridade = "Média";
+
+            if (prioridade == 3)
+                strPrioridade = "Alta";
+
+            return $"Título: {Titulo}, Prioridade: {strPrioridade}, Percentual: {percentual}%";
         }
         
         

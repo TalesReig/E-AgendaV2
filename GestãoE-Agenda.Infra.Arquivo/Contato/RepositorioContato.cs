@@ -14,5 +14,14 @@ namespace GestãoE_Agenda.Infra.Arquivo
         {
 
         }
+
+        public List<Contato> OrdenadosPorCargo()
+        {
+            List<Contato> contatosOrdenadosPorCargo = registros;
+
+            contatosOrdenadosPorCargo.Sort((x, y) => string.Compare(x.Cargo, y.Cargo));
+
+            return contatosOrdenadosPorCargo;
+        }
     }
 }

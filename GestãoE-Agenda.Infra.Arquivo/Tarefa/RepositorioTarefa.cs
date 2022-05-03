@@ -9,12 +9,18 @@ namespace GestãoE_Agenda.Infra.Arquivo
 {
     public class RepositorioTarefa : RepositorioBase<Tarefa>
     {
+        public RepositorioTarefa() : base(@"C:\Temp\Tarefas")
+        {
+
+        }
+
         public void AdcionarItens(Tarefa tarefaSelecionado, List<ItemTarefa> itens)
         {
             foreach(ItemTarefa i in itens)
             {
                 tarefaSelecionado.AdicionarItem(i);
             }
+            registrosJSon.Save(registros);
         }
 
         public void AtualizarItens(Tarefa tarefaSelecionado, IList<ItemTarefa> itensConcluidos, IList<ItemTarefa> itensPendentes)
@@ -28,6 +34,7 @@ namespace GestãoE_Agenda.Infra.Arquivo
             { 
                 tarefaSelecionado.MarcarPendente(item);
             }
+            registrosJSon.Save(registros);
         }
     }
 }

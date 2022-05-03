@@ -11,7 +11,7 @@ namespace GestãoE_Agenda.Infra.Arquivo
     {
         protected readonly List<T> registros;
 
-        private readonly JsonSerialization<T> registrosJSon;
+        protected readonly JsonSerialization<T> registrosJSon;
 
         protected int contadorId;
 
