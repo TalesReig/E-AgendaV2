@@ -1,4 +1,5 @@
 ﻿using GestãoE_Agenda.Infra.Arquivo;
+using GestãoTarefas.Dominio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace E_AgendaV2.WinFormsApp
 {
     public partial class TelaPrincipal : Form
     {
+        private readonly JsonSerialization<Contato> _jsonContactsSerialization;
         private readonly RepositorioContato _repositorioContato;
         private readonly ListagemDeContatos pContato;
 
@@ -21,11 +23,13 @@ namespace E_AgendaV2.WinFormsApp
 
         private readonly RepositorioTarefa _repositorioTarefa;
         private readonly ListagemDeTarefas pTarefas;
+
         public TelaPrincipal()
         {
             InitializeComponent();
             _repositorioContato = new RepositorioContato();
             pContato = new ListagemDeContatos(_repositorioContato);
+            Painel.Controls.Add(pContato);
 
             _repositorioCompromisso = new RepositorioCompromisso();
             pCompromisso = new ListagemDeCompromissos(_repositorioCompromisso, _repositorioContato.SelecionarTodos());

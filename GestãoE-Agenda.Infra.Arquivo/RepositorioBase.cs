@@ -7,11 +7,19 @@ using System.Threading.Tasks;
 
 namespace GestãoE_Agenda.Infra.Arquivo
 {
-    public class RepositorioBase<T> /*: IRepositorio<T>*/ where T : EntidadeBase
+    public class RepositorioBase<T> where T : EntidadeBase
     {
         protected readonly List<T> registros;
 
+        private readonly JsonSerialization<T> registrosJSon;
+
         protected int contadorId;
+
+        public RepositorioBase(string arquivo)
+        {
+            registrosJSon = new JsonSerialization<T>(arquivo);
+            registros = registrosJSon.Load();
+        }
 
         public RepositorioBase()
         {
@@ -20,23 +28,14 @@ namespace GestãoE_Agenda.Infra.Arquivo
 
         public virtual string Inserir(T entidade)
         {
-            // string resultadoValidacao = entidade.Validar();
-            // 
-            // if (resultadoValidacao != "REGISTRO_VALIDO")
-            //     return resultadoValidacao;
-            // 
             entidade.id = ++contadorId;
-            registros.Add(entidade); 
+            registros.Add(entidade);
+            registrosJSon.Save(registros);
             return "REGISTRO_VALIDO";   
         }
 
         public bool Editar(T novaEntidade)
         {
-        //    string resultadoValidacao = novaEntidade.Validar();
-        //
-        //    if (resultadoValidacao != "REGISTRO_VALIDO")
-        //        return false;
-        //
             foreach (T entidade in registros)
             {
                 if (novaEntidade.id == entidade.id)
@@ -45,7 +44,7 @@ namespace GestãoE_Agenda.Infra.Arquivo
         
                     int posicaoParaEditar = registros.IndexOf(entidade);
                     registros[posicaoParaEditar] = novaEntidade;
-        
+                    registrosJSon.Save(registros);
                     return true;
                 }
             }
@@ -55,6 +54,7 @@ namespace GestãoE_Agenda.Infra.Arquivo
         public bool Excluir(T novaEntidade)
         {
             registros.Remove(novaEntidade);
+            registrosJSon.Save(registros);
             return true;
         }
 

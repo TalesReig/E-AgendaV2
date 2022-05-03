@@ -10,5 +10,9 @@ namespace GestãoE_Agenda.Infra.Arquivo
 {
     public class RepositorioContato : RepositorioBase<Contato>
     {
+        public RepositorioContato() : base(@"C:\Temp\Contatos")
+        {
+
+        }
     }
 }
