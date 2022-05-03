@@ -61,7 +61,7 @@ namespace E_AgendaV2.WinFormsApp
                 return;
             }
 
-            CadastroDeCompromisso tela = new CadastroDeCompromisso();
+            CadastroDeCompromisso tela = new CadastroDeCompromisso(contatos2);
 
             tela.compromisso = contatoSelecionado;
 
@@ -71,7 +71,7 @@ namespace E_AgendaV2.WinFormsApp
             {
                 if (tela.compromisso.Validar() == "REGISTRO_VALIDO")
                 {
-                    repositorio.Inserir(tela.compromisso);
+                    repositorio.Editar(tela.compromisso);
                     CarregarCompromissos();
                 }
                 else

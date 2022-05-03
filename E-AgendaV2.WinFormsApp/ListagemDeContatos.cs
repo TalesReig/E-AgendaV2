@@ -65,7 +65,7 @@ namespace E_AgendaV2.WinFormsApp
             {
                 if (tela.contato.Validar() == "REGISTRO_VALIDO")
                 {
-                    repositorio.Inserir(tela.contato);
+                    repositorio.Editar(tela.contato);
                     CarregarContatos();
                 }
                 else

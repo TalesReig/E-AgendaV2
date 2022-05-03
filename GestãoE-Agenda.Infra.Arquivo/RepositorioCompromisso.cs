@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GestãoE_Agenda.Infra.Arquivo
 {
-    public class RepositorioCompromisso : RepositorioBase<Compromisso>, IRepositorio<Compromisso>
+    public class RepositorioCompromisso : RepositorioBase<Compromisso>
     {
     }
 }

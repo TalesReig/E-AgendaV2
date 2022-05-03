@@ -29,17 +29,17 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.btnCadastrarIten = new System.Windows.Forms.Button();
+            this.btnAtualizarIten = new System.Windows.Forms.Button();
+            this.tabControlTarefas = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listTarefas = new System.Windows.Forms.ListBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.tabControl1.SuspendLayout();
+            this.listTarefasPendentes = new System.Windows.Forms.ListBox();
+            this.tabControlTarefas.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.SuspendLayout();
@@ -54,116 +54,121 @@
             this.label1.TabIndex = 8;
             this.label1.Text = "Tarefas";
             // 
-            // button3
+            // btnExcluir
             // 
-            this.button3.Location = new System.Drawing.Point(26, 168);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(151, 37);
-            this.button3.TabIndex = 7;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExcluir.Location = new System.Drawing.Point(26, 168);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(151, 37);
+            this.btnExcluir.TabIndex = 7;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // button2
+            // btnEditar
             // 
-            this.button2.Location = new System.Drawing.Point(26, 125);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(151, 37);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnEditar.Location = new System.Drawing.Point(26, 125);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(151, 37);
+            this.btnEditar.TabIndex = 6;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
-            // button1
+            // btnCadastrar
             // 
-            this.button1.Location = new System.Drawing.Point(26, 82);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(151, 37);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Location = new System.Drawing.Point(26, 81);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(151, 37);
+            this.btnCadastrar.TabIndex = 5;
+            this.btnCadastrar.Text = "Inserir";
+            this.btnCadastrar.UseVisualStyleBackColor = true;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
-            // button4
+            // btnCadastrarIten
             // 
-            this.button4.Location = new System.Drawing.Point(26, 211);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(151, 37);
-            this.button4.TabIndex = 10;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnCadastrarIten.Location = new System.Drawing.Point(26, 211);
+            this.btnCadastrarIten.Name = "btnCadastrarIten";
+            this.btnCadastrarIten.Size = new System.Drawing.Size(151, 37);
+            this.btnCadastrarIten.TabIndex = 10;
+            this.btnCadastrarIten.Text = "Cadastrar Iten";
+            this.btnCadastrarIten.UseVisualStyleBackColor = true;
+            this.btnCadastrarIten.Click += new System.EventHandler(this.btnCadastrarIten_Click);
             // 
-            // button5
+            // btnAtualizarIten
             // 
-            this.button5.Location = new System.Drawing.Point(26, 254);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(151, 37);
-            this.button5.TabIndex = 11;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnAtualizarIten.Location = new System.Drawing.Point(26, 254);
+            this.btnAtualizarIten.Name = "btnAtualizarIten";
+            this.btnAtualizarIten.Size = new System.Drawing.Size(151, 37);
+            this.btnAtualizarIten.TabIndex = 11;
+            this.btnAtualizarIten.Text = "Atualizar Itens";
+            this.btnAtualizarIten.UseVisualStyleBackColor = true;
+            this.btnAtualizarIten.Click += new System.EventHandler(this.btnAtualizarIten_Click);
             // 
-            // tabControl1
+            // tabControlTarefas
             // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(194, 41);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(475, 259);
-            this.tabControl1.TabIndex = 12;
+            this.tabControlTarefas.Controls.Add(this.tabPage1);
+            this.tabControlTarefas.Controls.Add(this.tabPage2);
+            this.tabControlTarefas.Location = new System.Drawing.Point(194, 41);
+            this.tabControlTarefas.Name = "tabControlTarefas";
+            this.tabControlTarefas.SelectedIndex = 0;
+            this.tabControlTarefas.Size = new System.Drawing.Size(475, 259);
+            this.tabControlTarefas.TabIndex = 12;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.listBox1);
+            this.tabPage1.Controls.Add(this.listTarefas);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(467, 231);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.Text = "Tarefas";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // listTarefas
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(0, -2);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(467, 229);
-            this.listBox1.TabIndex = 0;
+            this.listTarefas.FormattingEnabled = true;
+            this.listTarefas.ItemHeight = 15;
+            this.listTarefas.Location = new System.Drawing.Point(0, 2);
+            this.listTarefas.Name = "listTarefas";
+            this.listTarefas.Size = new System.Drawing.Size(467, 229);
+            this.listTarefas.TabIndex = 0;
             // 
             // tabPage2
             // 
-            this.tabPage2.Controls.Add(this.listBox2);
+            this.tabPage2.Controls.Add(this.listTarefasPendentes);
             this.tabPage2.Location = new System.Drawing.Point(4, 24);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(467, 231);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Tarefas Pendentes ";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // listBox2
+            // listTarefasPendentes
             // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 15;
-            this.listBox2.Location = new System.Drawing.Point(1, 1);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(470, 229);
-            this.listBox2.TabIndex = 0;
+            this.listTarefasPendentes.FormattingEnabled = true;
+            this.listTarefasPendentes.ItemHeight = 15;
+            this.listTarefasPendentes.Location = new System.Drawing.Point(0, 2);
+            this.listTarefasPendentes.Name = "listTarefasPendentes";
+            this.listTarefasPendentes.Size = new System.Drawing.Size(467, 229);
+            this.listTarefasPendentes.TabIndex = 0;
             // 
             // ListagemDeTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.tabControlTarefas);
+            this.Controls.Add(this.btnAtualizarIten);
+            this.Controls.Add(this.btnCadastrarIten);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnCadastrar);
             this.Name = "ListagemDeTarefas";
             this.Size = new System.Drawing.Size(688, 339);
-            this.tabControl1.ResumeLayout(false);
+            this.tabControlTarefas.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -173,15 +178,15 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Button btnCadastrarIten;
+        private System.Windows.Forms.Button btnAtualizarIten;
+        private System.Windows.Forms.TabControl tabControlTarefas;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listTarefas;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.ListBox listBox2;
+        private System.Windows.Forms.ListBox listTarefasPendentes;
     }
 }

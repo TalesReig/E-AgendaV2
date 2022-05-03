@@ -19,6 +19,7 @@ namespace E_AgendaV2.WinFormsApp
         private readonly RepositorioCompromisso _repositorioCompromisso;
         private readonly ListagemDeCompromissos pCompromisso;
 
+        private readonly RepositorioTarefa _repositorioTarefa;
         private readonly ListagemDeTarefas pTarefas;
         public TelaPrincipal()
         {
@@ -28,7 +29,9 @@ namespace E_AgendaV2.WinFormsApp
 
             _repositorioCompromisso = new RepositorioCompromisso();
             pCompromisso = new ListagemDeCompromissos(_repositorioCompromisso, _repositorioContato.SelecionarTodos());
-            pTarefas = new ListagemDeTarefas();
+
+            _repositorioTarefa = new RepositorioTarefa();
+            pTarefas = new ListagemDeTarefas(_repositorioTarefa);
         }
 
         private void button1_Click(object sender, EventArgs e)

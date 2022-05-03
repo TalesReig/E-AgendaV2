@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace GestãoE_Agenda.Infra.Arquivo
 {
-    public class RepositorioBase<T> : IRepositorio<T> where T : EntidadeBase
+    public class RepositorioBase<T> /*: IRepositorio<T>*/ where T : EntidadeBase
     {
         protected readonly List<T> registros;
 
@@ -26,8 +26,8 @@ namespace GestãoE_Agenda.Infra.Arquivo
             //     return resultadoValidacao;
             // 
             entidade.id = ++contadorId;
-            registros.Add(entidade);
-            return "REGISTRO_VALIDO";
+            registros.Add(entidade); 
+            return "REGISTRO_VALIDO";   
         }
 
         public bool Editar(T novaEntidade)

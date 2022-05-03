@@ -1,52 +1,56 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace GestãoTarefas.Dominio
 {
-    internal class Tarefa : EntidadeBase
+    public class Tarefa : EntidadeBase
     {
         private List<ItemTarefa> itens = new List<ItemTarefa>();
-
+        
         public Tarefa()
         {
-            DataCriacao = DateTime.Now;
+            //DataCriacao = DateTime.Now;
         }
-
+        
         public Tarefa(int n, string t) : this()
         {
             Numero = n;
             Titulo = t;
             DataConclusao = null;
         }
-
+        
         public int Numero { get; set; }
         public string Titulo { get; set; }
         public DateTime DataCriacao { get; set; }
         public DateTime? DataConclusao { get; set; }
-        public List<ItemTarefa> Itens { get { return itens; } }
 
+        public int prioridade;
+        //public List<ItemTarefa> Itens { get { return itens; } }
+        
         public override string ToString()
         {
             var percentual = CalcularPercentualConcluido();
 
             if (DataConclusao.HasValue)
             {
-                return $"Número: {Numero}, Título: {Titulo}, Percentual: {percentual}, " +
+                return $"Título: {Titulo},Percentual: {percentual}, " +
                     $"Concluída: {DataConclusao.Value.ToShortDateString()}";
             }
 
-            return $"Número: {Numero}, Título: {Titulo}, Percentual: {percentual}";
+            return $"Título: {Titulo}, Percentual: {percentual}";
         }
-
+        
+        /*
         public void AdicionarItem(ItemTarefa item)
         {
             if (Itens.Exists(x => x.Equals(item)) == false)
                 itens.Add(item);
         }
-
+        
         public void ConcluirItem(ItemTarefa item)
         {
             ItemTarefa itemTarefa = itens.Find(x => x.Equals(item));
@@ -58,13 +62,14 @@ namespace GestãoTarefas.Dominio
             if (percentual == 100)
                 DataConclusao = DateTime.Now;
         }
-
+        
         public void MarcarPendente(ItemTarefa item)
         {
             ItemTarefa itemTarefa = itens.Find(x => x.Equals(item));
 
             itemTarefa?.MarcarPendente();
         }
+        */
 
         public decimal CalcularPercentualConcluido()
         {
@@ -77,10 +82,9 @@ namespace GestãoTarefas.Dominio
 
             return Math.Round(percentualConcluido, 2);
         }
-
         public override string Validar()
         {
-            throw new NotImplementedException();
+            return "REGISTRO_VALIDO";
         }
     }
 }
