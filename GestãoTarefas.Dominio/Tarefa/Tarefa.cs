@@ -41,7 +41,7 @@ namespace GestãoTarefas.Dominio
                     $"Concluída: {DataConclusao.Value.ToShortDateString()}";
             }
 
-            return $"Título: {Titulo}, Percentual: {percentual}";
+            return $"Título: {Titulo}, Percentual: {percentual}%";
         }
         
         

@@ -16,5 +16,18 @@ namespace GestãoE_Agenda.Infra.Arquivo
                 tarefaSelecionado.AdicionarItem(i);
             }
         }
+
+        public void AtualizarItens(Tarefa tarefaSelecionado, IList<ItemTarefa> itensConcluidos, IList<ItemTarefa> itensPendentes)
+        {
+            foreach(var  item in itensConcluidos)
+            {
+                tarefaSelecionado.ConcluirItem(item);
+            }
+
+            foreach (var item in itensPendentes) 
+            { 
+                tarefaSelecionado.MarcarPendente(item);
+            }
+        }
     }
 }

@@ -122,7 +122,27 @@ namespace E_AgendaV2.WinFormsApp
 
         private void btnAtualizarIten_Click(object sender, EventArgs e)
         {
+            Tarefa tarefaSelecionado = (Tarefa)listTarefas.SelectedItem;
 
+            if (tarefaSelecionado == null)
+            {
+                MessageBox.Show("Selecione uma tarefa primeiro",
+                "Edição de Tarefas", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            AtualizacaoDeItensDaTarefa tela = new AtualizacaoDeItensDaTarefa(tarefaSelecionado);
+
+            if (tela.ShowDialog() == DialogResult.OK)
+            {
+                List<ItemTarefa> itensConcluidos = tela.itensConcluidos;
+
+                List<ItemTarefa> itensPendentes = tela.itensPendentes;
+
+                repositorio.AtualizarItens(tarefaSelecionado, itensConcluidos, itensPendentes);
+
+                CarregarTarefas();
+            }
         }
 
         private void CarregarTarefas()
