@@ -15,6 +15,17 @@ namespace GestãoE_Agenda.Infra.Arquivo
 
         }
 
+
+        public void AgendarContato(int id)
+        {
+            registros[id].temCompromisso = false;
+        }
+
+        public void DesagendarContato(Contato contato)
+        {
+            contato.temCompromisso = false;
+        }
+
         public List<Contato> OrdenadosPorCargo()
         {
             List<Contato> contatosOrdenadosPorCargo = registros;

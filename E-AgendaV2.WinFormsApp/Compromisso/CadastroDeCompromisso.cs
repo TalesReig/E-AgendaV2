@@ -47,6 +47,7 @@ namespace E_AgendaV2.WinFormsApp
             {
 
             }
+            compromisso.idContato = cbxContatos.SelectedIndex;
             compromisso.NomeContato = cbxContatos.Text;
         }
 

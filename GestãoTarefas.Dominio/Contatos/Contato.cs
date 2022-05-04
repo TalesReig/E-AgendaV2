@@ -13,9 +13,11 @@ namespace GestãoTarefas.Dominio
         public string Telefone { get; set; }
         public string Empresa { get; set; }
         public string Cargo { get; set; }
+        public bool temCompromisso { get; set; }
 
         public Contato()
         {
+            temCompromisso = false;
         }
 
         public Contato(string nome, string email, string telefone, string empresa, string cargo)
@@ -25,6 +27,7 @@ namespace GestãoTarefas.Dominio
             Telefone = telefone;
             Empresa = empresa;
             Cargo = cargo;
+            temCompromisso = false;
         }
 
         #region Validações
@@ -78,7 +81,7 @@ namespace GestãoTarefas.Dominio
 
         public override string ToString()
         {
-            return $"|Nome: {Nome}|Email: {Email}|Telefone: {Telefone}|Empresa: {Empresa}|Cargo: {Cargo}|";
+            return $"Nome: {Nome}Email: {Email}Telefone: {Telefone}Empresa: {Empresa}Cargo: {Cargo}";
         }
     }
 }

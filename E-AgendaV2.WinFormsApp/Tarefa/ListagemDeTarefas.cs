@@ -42,8 +42,8 @@ namespace E_AgendaV2.WinFormsApp
                 }
                 else
                 {
-                    MessageBox.Show("Prencha os campos brigatorios Nome/E-mail/Telefone e nos padroes corretos Telefone (xx)xxxxx-xxxx",
-                    "Inserção de Contatos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    MessageBox.Show("Prencha os campos brigatorios Titulo da Tarefa",
+                    "Inserção de Tarefa", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }

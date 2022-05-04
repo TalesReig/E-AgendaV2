@@ -53,7 +53,6 @@ namespace GestãoTarefas.Dominio
             return $"Título: {Titulo}, Prioridade: {strPrioridade}, Percentual: {percentual}%";
         }
         
-        
         public void AdicionarItem(ItemTarefa item)
         {
             //evita duplicar a lista
@@ -80,7 +79,6 @@ namespace GestãoTarefas.Dominio
             itemTarefa?.MarcarPendente();
         }
         
-
         public decimal CalcularPercentualConcluido()
         {
             if (itens.Count == 0)
@@ -94,6 +92,9 @@ namespace GestãoTarefas.Dominio
         }
         public override string Validar()
         {
+            if (string.IsNullOrEmpty(Titulo))
+                return "REGISTRO_INVALIDO";
+            
             return "REGISTRO_VALIDO";
         }
     }

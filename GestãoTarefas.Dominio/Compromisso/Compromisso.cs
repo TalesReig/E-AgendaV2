@@ -16,6 +16,7 @@ namespace GestãoTarefas.Dominio
         public int? HoraInicio { get; set; }
         public int? HoraTermino { get; set; }
         public string NomeContato { get; set; }
+        public int idContato { get; set; }
 
         public Compromisso(string assunto, string local, DateTime dataCompromisso, int horaInicio, int horaTermino, string contato)
         {
@@ -33,8 +34,6 @@ namespace GestãoTarefas.Dominio
 
         public override string ToString()
         {
-            //string contatoRelacionado = Contato is null ? "Não disponível" : Contato.Nome;
-
             return $"Assunto: {Assunto} Data: {_dataCompromisso} H Inicio: {HoraInicio} H Termino: {HoraTermino} Contato: {NomeContato}";
         }
 

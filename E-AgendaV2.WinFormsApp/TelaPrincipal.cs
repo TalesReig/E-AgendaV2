@@ -34,7 +34,7 @@ namespace E_AgendaV2.WinFormsApp
             Painel.Controls.Add(pContato);
 
             _repositorioCompromisso = new RepositorioCompromisso();
-            pCompromisso = new ListagemDeCompromissos(_repositorioCompromisso, _repositorioContato.SelecionarTodos());
+            pCompromisso = new ListagemDeCompromissos(_repositorioCompromisso, _repositorioContato, _repositorioContato.SelecionarTodos());
 
             _repositorioTarefa = new RepositorioTarefa();
             pTarefas = new ListagemDeTarefas(_repositorioTarefa, _jsonTarefasSerialization);

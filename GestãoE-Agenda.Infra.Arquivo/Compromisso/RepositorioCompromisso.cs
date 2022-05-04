@@ -13,5 +13,20 @@ namespace GestãoE_Agenda.Infra.Arquivo
         {
 
         }
+
+        public List<Compromisso> SelecionarCompromissosPassados()
+        {
+            return registros.Where(x => x.DataCompromisso < DateTime.Today).ToList();
+        }
+
+        public List<Compromisso> SelecionarCompromissosFuturos()
+        {
+            return registros.Where(x => x.DataCompromisso > DateTime.Today).ToList();
+        }
+
+        public List<Compromisso> SelecionarCompromissosEntre(DateTime inicio, DateTime termino)
+        {
+            return registros.Where(x => x.DataCompromisso > inicio && x.DataCompromisso < termino).ToList();
+        }
     }
 }

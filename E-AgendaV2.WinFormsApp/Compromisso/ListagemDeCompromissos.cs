@@ -16,16 +16,20 @@ namespace E_AgendaV2.WinFormsApp
     {
         RepositorioCompromisso repositorio;
         RepositorioContato repositorioContato;
+
         List<Contato> contatos2;
-        public ListagemDeCompromissos(RepositorioCompromisso repositorio, List<Contato> contatos)
+        public ListagemDeCompromissos(RepositorioCompromisso repositorio, RepositorioContato repoContato, List<Contato> contatos)
         {
             this.repositorio = repositorio;
+            this.repositorioContato = repoContato;
             contatos2 = contatos;
 
             CadastroDeCompromisso tela = new CadastroDeCompromisso(contatos2);
 
             InitializeComponent();
             CarregarCompromissos();
+            CarregarCompromissosFuturos();
+            CarregarCompromissosPassados();
         }
 
         private void btnInserir_Click(object sender, EventArgs e)
@@ -40,7 +44,9 @@ namespace E_AgendaV2.WinFormsApp
                 if (tela.compromisso.Validar() == "REGISTRO_VALIDO")
                 {
                     repositorio.Inserir(tela.compromisso);
+                    repositorioContato.AgendarContato(tela.compromisso.idContato);
                     CarregarCompromissos();
+                    CarregarCompromissosFuturos();
                 }
                 else
                 {
@@ -52,7 +58,7 @@ namespace E_AgendaV2.WinFormsApp
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            Compromisso contatoSelecionado = (Compromisso)listCompromissos.SelectedItem;
+            Compromisso contatoSelecionado = (Compromisso)listCompromissosFuturos.SelectedItem;
 
             if (contatoSelecionado == null)
             {
@@ -73,18 +79,19 @@ namespace E_AgendaV2.WinFormsApp
                 {
                     repositorio.Editar(tela.compromisso);
                     CarregarCompromissos();
+                    CarregarCompromissosFuturos();
                 }
                 else
                 {
                     MessageBox.Show("Prencha os campos brigatorios Assunto, Local e Data do compromisso",
-                    "Inserção de Contatos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    "Inserção de Compromissos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            Compromisso contatoSelecionado = (Compromisso)listCompromissos.SelectedItem;
+            Compromisso contatoSelecionado = (Compromisso)listCompromissosFuturos.SelectedItem;
 
             if (contatoSelecionado == null)
             {
@@ -100,19 +107,60 @@ namespace E_AgendaV2.WinFormsApp
             {
                 repositorio.Excluir(contatoSelecionado);
                 CarregarCompromissos();
+                CarregarCompromissosFuturos();
             }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            DateTime dataInicio = dateTimeinicio.Value;
+            DateTime dataFim = dateTimefim.Value;
+
+            CarregarCompromissosEntre(dataInicio, dataFim);
         }
 
         #region métodos privados
         private void CarregarCompromissos()
         {
             List<Compromisso> compromissos = repositorio.SelecionarTodos();
-
-            listCompromissos.Items.Clear();
+            listBox1.Items.Clear();
 
             foreach (Compromisso c in compromissos)
             {
-                listCompromissos.Items.Add(c);
+                listBox1.Items.Add(c);
+            }
+        }
+
+        private void CarregarCompromissosFuturos()
+        {
+            List<Compromisso> compromissos = repositorio.SelecionarCompromissosFuturos();
+            listCompromissosFuturos.Items.Clear();
+
+            foreach (Compromisso c in compromissos)
+            {
+                listCompromissosFuturos.Items.Add(c);
+            }
+        }
+
+        private void CarregarCompromissosPassados()
+        {
+            List<Compromisso> compromissos = repositorio.SelecionarCompromissosPassados();
+            listCompromissosPassados.Items.Clear();
+
+            foreach (Compromisso c in compromissos)
+            {
+                listCompromissosPassados.Items.Add(c);
+            }
+        }
+
+        private void CarregarCompromissosEntre(DateTime inicio, DateTime termino)
+        {
+            List<Compromisso> compromissos = repositorio.SelecionarCompromissosEntre(inicio, termino);
+            listBoxPorPeriodo.Items.Clear();
+
+            foreach (Compromisso c in compromissos)
+            {
+                listBoxPorPeriodo.Items.Add(c);
             }
         }
 
