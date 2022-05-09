@@ -1,8 +1,8 @@
-#e-Agenda 2.0 - Winforms 
+# e-Agenda 2.0 - Winforms 
 
-##Projeto implementado com interface gráfica !!!
+## Projeto implementado com interface gráfica !!!
 
-##Tarefas 
+## Tarefas 
   1. Inserir 
   • Para cada tarefa, José Pedro registra uma prioridade. 
   • Uma ideia para a prioridade é classificá-la em 3 categorias: Alta, Normal e Baixa. 
@@ -23,7 +23,7 @@
   • O percentual de cada tarefa é calculado nos percentuais dos itens de execução. 
   • Quando uma tarefa receber 100% de execução, esta deve ser movida automaticamente para a lista de tarefas concluídas, podendo ser apagada, se for  o caso. 
   • A data de conclusão será preenchida ao concluir todos os itens da tarefa. Caso a tarefa tenha itens pendentes, a data de conclusão não deverá ser  apresentada 
-##Contatos 
+## Contatos 
   7. Inserir  
   • Para cada contato, José Pedro gostaria de armazenar o nome, e-mail, telefone, empresa e o cargo da pessoa 
   • O sistema não pode permitir o cadastro caso o e-mail ou o telefone estejam inválidos. 
@@ -37,7 +37,7 @@
   • Não é possível excluir um contato anexado num compromisso aberto 
   10. Visualizar 
   • A aplicação deverá possibilitar a visualização da lista e contatos agrupados por cargo. 
-##Compromissos 
+## Compromissos 
   11. Inserir  
   • Assunto, local, data do compromisso, hora de início e término. A maioria dos compromissos estão relacionados com algum contato de sua agenda.  • Não pode permitir cadastrar compromissos sem um assunto, local e data do compromisso. 
   • A data do compromisso não pode ser antes da data atual 
